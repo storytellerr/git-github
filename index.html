@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Git-Github Workshop</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<div class="row">
+						<div class="col-3">
+							<img data-src="images/octocat.gif" style="height:400px;width:400px">
+						</div>
+						<div class="col-3">git-Github Workshop</div>
+					</div>
+				</section>
+				<section>
+						<section id="fragments">
+								<h2>Version Control System(VCS)</h2>
+									<p class="fragment">VCS is a software that helps software developers to work together and maintain a complete history of their work.</p>
+										<ul>
+											<li><p class="fragment">Allows developers to work simultaneously.</p></li>
+										  <li><p class="fragment">Does not allow overwriting each other’s changes.</p></li>
+										  <li><p class="fragment">Maintains a history of every version.</p></li>
+										</ul>
+						</section>
+						<section>
+							 <h3>Different Types VCS</h3>
+						</section>
+						<section>
+							 <h3>cvcs vs dvcs</h3>
+						</section>
+						
+			  </section>
+				<section>dvcs working concept</section>
+				<section>installation git</section>
+				<section>git code lab</section>
+				<section>extras</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
