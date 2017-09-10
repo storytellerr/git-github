@@ -44,15 +44,121 @@
 						</section>
 						<section>
 							 <h3>Different Types VCS</h3>
+							 <img data-src="images/cvcs_vs_dvcs.png" style="height:500px;width:700px">
 						</section>
 						<section>
-							 <h3>cvcs vs dvcs</h3>
+							<table>
+		 						<thead>
+		 							<tr>
+		 								<th>CVCS</th>
+		 								<th>DVCS</th>
+		 							</tr>
+		 						</thead>
+		 						<tbody>
+		 							<tr>
+		 								<td>no sendboxing</td>
+		 								<td>sendboxing</td>
+		 							</tr>
+		 							<tr>
+		 								<td>Latest code at a place</td>
+		 								<td>no latest code at a place</td>
+		 							</tr>
+		 							<tr>
+		 								<td>slow</td>
+		 								<td>fast</td>
+		 							</tr>
+									<tr>
+										<td>dependency upon central system</td>
+										<td>very less dependancy upon central system</td>
+									</tr>
+		 						</tbody>
+		 					</table>
 						</section>
-						
 			  </section>
-				<section>dvcs working concept</section>
 				<section>installation git</section>
-				<section>git code lab</section>
+				<section>
+					<section>
+						<h3>dvcs bybilography<h3>
+						<img data-src="images/dvcs_exp.jpg" style="height:500px;width:700px">
+				  </section>
+					<section>
+						working directory/ git directory/staging and indexing area
+					</section>
+					<section>
+						commit/head
+					</section>
+					<section>
+			    	<h2>Branch<h2>
+						<h3>Branches are used to create another line of development<h3>
+						<aside class="notes">
+								Branches are used to create another line of development. By default, Git has a
+								master branch, which is same as trunk in Subversion. Usually, a branch is
+								created to work on a new feature. Once the feature is completed, it is merged
+								back with the master branch and we delete the branch. Every branch is
+								4GIT referenced by HEAD, which points to the latest commit in the branch. Whenever
+								you make a commit, HEAD is updated with the latest commit.
+						<aside>
+					</section>
+					<section>
+						pull/push/clone
+					</section>
+					<section>
+						<img data-src="images/dvcs.png" style="height:500px;width:700px">
+					</section>
+				</section>
+				<section>
+					<section>git code lab</section>
+					<section>
+							<pre><code class="hljs" data-trim contenteditable>
+								git init
+							</code></pre>
+						<img data-src="images/gif/git-init.gif" style="height:500px;width:800px">
+					</section>
+					<section>
+						<pre><code class="hljs" data-trim contenteditable>
+							-git status
+							-git add
+						</code></pre>
+						<img data-src="images/gif/git-add.gif" style="height:500px;width:800px">
+						<aside class="notes">git add -a = stage all files(add/delete/modified)
+																 git add . = stage new and modified
+																 git add -u =stage modified and deleted
+						</aside>
+					</section>
+					<section>
+						<pre><code class="hljs" data-trim contenteditable>
+							-git commit
+						</code></pre>
+						<img data-src="images/gif/git-commit.gif" style="height:500px;width:800px">
+					</section>
+					<section>
+						<pre><code class="hljs" data-trim contenteditable>
+							-git log
+						</code></pre>
+						<img data-src="images/gif/git-log.gif" style="height:500px;width:800px">
+					</section>
+					<section>
+						<pre><code class="hljs" data-trim contenteditable>
+							-git branch branch_name
+						</code></pre>
+						<img data-src="images/gif/git-branch.gif" style="height:500px;width:800px">
+					</section>
+					<section>
+						<pre><code class="hljs" data-trim contenteditable>
+							-git checkout branch_name
+						</code></pre>
+						<img data-src="images/gif/git-checkout-branch.gif" style="height:500px;width:800px">
+					</section>
+					<section>git stage</section>
+					<section>git merge</section>
+					<section>git diff</section>
+					<section>git push</section>
+					<section>git fetch</section>
+					<section>git pull</section>
+					<section>git rebase</section>
+					<section>git tag</section>
+
+				</section>
 				<section>extras</section>
 			</div>
 		</div>
