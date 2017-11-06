@@ -85,22 +85,55 @@
 						working directory/ git directory/staging and indexing area
 					</section>
 					<section>
-						commit/head
+						<h2>commit</h2>
+						<h4>Commit holds the current state of the repository. A commit is also named
+							by SHA1 hash.
+						</h4>
+						<img data-src="images/a-commit.png" style="height:350px;width:700px">
+						<aside class="notes">
+							You can consider a commit object as a node of the linked list.
+							Every commit object has a pointer to the parent commit object. From a given
+							commit, you can traverse back by looking at the parent pointer to view the
+							history of the commit.
+
+							HEAD is a pointer, which always points to the latest commit in the branch.
+							Whenever you make a commit, HEAD is updated with the latest commit. The
+							heads of the branches are stored in .git/refs/heads/ directory.
+						<aside>
 					</section>
 					<section>
-			    	<h2>Branch<h2>
-						<h3>Branches are used to create another line of development<h3>
+			    	<h2>Branch</h2>
+						<h4>Branches are used to create another line of development.By default, Git has a
+						master branch</h4>
+						<img data-src="images/branches.svg" style="height:350px;width:700px">
 						<aside class="notes">
-								Branches are used to create another line of development. By default, Git has a
-								master branch, which is same as trunk in Subversion. Usually, a branch is
+								which is same as trunk in Subversion. Usually, a branch is
 								created to work on a new feature. Once the feature is completed, it is merged
 								back with the master branch and we delete the branch. Every branch is
-								4GIT referenced by HEAD, which points to the latest commit in the branch. Whenever
+								referenced by HEAD, which points to the latest commit in the branch. Whenever
 								you make a commit, HEAD is updated with the latest commit.
 						<aside>
 					</section>
 					<section>
-						pull/push/clone
+					 	<h2>Merge</h2>
+						<h3>A Merge is the merging of other barnches into the master or some other branch</h3>
+						<img data-src="images/a-merge.png" style="height:350px:width:700px">
+						<aside class="notes">
+							talk about what happens to commits after merge and the rebasing
+						</aside>
+					</section>
+					<section>
+						<h2>Pull</h2>
+						<h4>Pull operation copies the changes from a remote repository instance to a local
+						one. The pull operation is used for synchronization between two repository
+						instances.
+					  </h4>
+						<aside class="notes">pull is same as the update operation in Subversion.
+						                     push is same as commit opration in subversion
+					  </aside>
+						<h2>Push</h2>
+						<h4>Push operation copies changes from a local repository instance to a remote one.
+						This is used to store the changes permanently into the Git repository.</h4>
 					</section>
 					<section>
 						<img data-src="images/dvcs.png" style="height:500px;width:700px">
@@ -113,6 +146,18 @@
 								git init
 							</code></pre>
 						<img data-src="images/gif/git-init.gif" style="height:500px;width:800px">
+						<aside class="notes">
+							hidden directory linux->ctrl+H
+						</aside>
+					</section>
+					<section>
+							<pre><code class="hljs" data-trim contenteditable>
+								git config
+							</code></pre>
+						<img data-src="images/gif/git-config-user.gif" style="height:500px;width:800px">
+						<aside class="notes">
+
+						</aside>
 					</section>
 					<section>
 						<pre><code class="hljs" data-trim contenteditable>
@@ -130,12 +175,14 @@
 							-git commit
 						</code></pre>
 						<img data-src="images/gif/git-commit.gif" style="height:500px;width:800px">
+						<aside class="notes">git commit -m "blabla"</aside>
 					</section>
 					<section>
 						<pre><code class="hljs" data-trim contenteditable>
 							-git log
 						</code></pre>
 						<img data-src="images/gif/git-log.gif" style="height:500px;width:800px">
+						<aside class="notes">talk about sha1 and more about commits</aside>
 					</section>
 					<section>
 						<pre><code class="hljs" data-trim contenteditable>
@@ -148,15 +195,58 @@
 							-git checkout branch_name
 						</code></pre>
 						<img data-src="images/gif/git-checkout-branch.gif" style="height:500px;width:800px">
+						<aside class="notes">shows all branches and current branch also creates new</aside>
 					</section>
-					<section>git stage</section>
-					<section>git merge</section>
-					<section>git diff</section>
-					<section>git push</section>
-					<section>git fetch</section>
-					<section>git pull</section>
-					<section>git rebase</section>
-					<section>git tag</section>
+					<section>
+						<pre><code class="hljs" data-trim contenteditable>
+							git stage
+						</code></pre>
+						<aside class="notes">stage's  all files/add all files to staging area difference between stage and add that </aside>
+					</section>
+					<section>
+						<pre><code class="hljs" data-trim contenteditable>
+							git merge
+						</code></pre>
+						<img data-src="images/merge.png" style="height:500px;width:800px">
+						<aside class="notes">merges a branch to another branch. also give birth to merge conflict</aside>
+					</section>
+					<section>
+						<pre><code class="hljs" data-trim contenteditable>
+							git diff
+						</code></pre>
+						<img data-src="images/gif/git-diff.gif" style="height:500px;width:800px">
+						<aside class="notes">shows differnce between two different branches</aside>
+					</section>
+					<section>
+						<pre><code class="hljs" data-trim contenteditable>
+							git rebase
+							git rebase master
+							git rebase master staging
+						</code></pre>
+						<img data-src="images/rebase.png" style="height:500px;width:800px">
+					</section>
+					<section>
+						<pre><code class="hljs" data-trim contenteditable>
+							git push
+						</code></pre>
+						<aside class="notes">git push origin branch_name</aside>
+					</section>
+					<section>
+						<pre><code class="hljs" data-trim contenteditable>
+							git fetch
+						</code></pre>
+					</section>
+					<section>
+						<pre><code class="hljs" data-trim contenteditable>
+							git pull origin
+						</code></pre>
+						<img data-src="images/git-pull.png" style="height:500px;width:800px">
+					</section>
+					<!-- <section>
+						<pre><code class="hljs" data-trim contenteditable>
+							git tag
+						</code></pre>
+					</section> -->
 
 				</section>
 				<section>extras</section>
